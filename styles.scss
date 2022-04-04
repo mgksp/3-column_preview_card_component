@@ -1,4 +1,80 @@
+@use "reset";
+@use "colors" as clr;
+
+body {
+  display: grid;
+  place-content: center;
+}
+
+body,
+button {
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.card {
+  overflow: hidden;
+  border-radius: 0.8rem;
+  display: grid;
+  grid-template-columns: repeat(3, 36rem);
+
+  &__item {
+    padding: 6.4rem;
+
+    &__icon {
+      margin-bottom: 3.2rem;
+    }
+
+    &__title {
+      color: clr.$lt-gray;
+      font-family: "Big Shoulders Display", cursive;
+      font-weight: 700;
+      font-size: 4.2rem;
+      text-transform: uppercase;
+      margin-bottom: 3.2rem;
+    }
+
+    &__description {
+      color: clr.$transparent-white;
+      line-height: 1.8;
+      margin-bottom: 6.4rem;
+    }
+
+    &__button {
+      padding: 1.2em;
+      border-radius: 2em;
+      background-color: clr.$lt-gray;
+      color: inherit;
+      border: 1px solid clr.$lt-gray;
+      cursor: pointer;
+      transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
+
+      &:hover {
+        background-color: transparent;
+        color: clr.$lt-gray;
+      }
+    }
+
+    &--sedan {
+      background-color: clr.$bright-orange;
+      color: clr.$bright-orange;
+    }
+
+    &--suv {
+      background-color: clr.$dk-cyan;
+      color: clr.$dk-cyan;
+    }
+
+    &--luxury {
+      background-color: clr.$dker-cyan;
+      color: clr.$dker-cyan;
+    }
+  }
+}
+
 .attribution {
+  width: 100%;
+  position: absolute;
+  bottom: 1rem;
   font-size: 11px;
   text-align: center;
   a {
