@@ -1,5 +1,6 @@
 @use "reset";
 @use "colors" as clr;
+@use "breakpoints" as br;
 
 body {
   display: grid;
@@ -16,6 +17,11 @@ button {
   border-radius: 0.8rem;
   display: grid;
   grid-template-columns: repeat(3, 36rem);
+
+  @include br.breakpoint(1080px) {
+    grid-template-columns: 36rem;
+    margin-block: 2rem;
+  }
 
   &__item {
     padding: 6.4rem;
@@ -37,6 +43,10 @@ button {
       color: clr.$transparent-white;
       line-height: 1.8;
       margin-bottom: 6.4rem;
+
+      @include br.breakpoint(1080px) {
+        margin-bottom: 3.2rem;
+      }
     }
 
     &__button {
@@ -79,5 +89,10 @@ button {
   text-align: center;
   a {
     color: hsl(228, 45%, 44%);
+  }
+
+  @include br.breakpoint(1080px) {
+    position: static;
+    padding-bottom: 1rem;
   }
 }
