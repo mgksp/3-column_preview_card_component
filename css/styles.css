@@ -62,7 +62,7 @@ button {
   }
 }
 .card__item__button {
-  padding: 1.2em;
+  padding: 1.2em 2.4em;
   border-radius: 2em;
   background-color: hsl(0deg, 0%, 95%);
   color: inherit;
